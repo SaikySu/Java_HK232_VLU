@@ -19,7 +19,7 @@ class Rectangle {
     }
 
     public void display() {
-        System.out.println("CHu vi HCN: " + Chuvi());
+        System.out.println("Chu vi HCN: " + Chuvi());
         System.out.println("Dien tich HCN: " + Dientich());
     }
 }
