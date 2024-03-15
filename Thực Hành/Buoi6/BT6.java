@@ -141,22 +141,71 @@ public class BT6 {
 
     public static void main(String[] args) {
         BT6 run2 = new BT6();
+        int x;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap chuoi cua ban: ");
-        String input = scanner.nextLine();
-        run2.NhanData(input);
-        System.out.println("Chuoi ban vua nhap la: ");
-        run2.InChuoi();
-        // run2.KTDoDai();
-        // run2.KTKhoangTrang();
-        // run2.ChuyenChuHoa();
-        // run2.ChuyenChuThuong();
-        // run2.KiemtraBang();
-        // run2.KiemtraBang2();
-        // run2.KTChuoi();
-        // run2.KTKiTu();
-        // run2.Daochuoi();
-        // run2.ThayThe();
+        String chuoi1 = scanner.nextLine();
+        run2.NhanData(chuoi1);
+        System.out.println("Chuoi ban vua nhap la: " + chuoi1);
+        System.out.println("1. In chuoi");
+        System.out.println("2. In do dai chuoi");
+        System.out.println("3. Kiem tra rong cua chuoi");
+        System.out.println("4. Kiem tra khoang trang cua chuoi");
+        System.out.println("5. Chuyen chuoi sang dang Hoa");
+        System.out.println("6. Chuyen chuoi sang dang thuong");
+        System.out.println("7. So sanh 2 chuoi");
+        System.out.println("8. So sanh 2 chuoi khong chu in");
+        System.out.println("9. Kiem tra su ton tai cua chuoi con");
+        System.out.println("10. Kiem tra chuoi co bao nhieu ki tu 't' va 'd'");
+        System.out.println("11. Dao chuoi");
+        System.out.println("12. Thay the chuoi");
+        System.out.println("Nhap tuy chon: ");
+        x = scanner.nextInt();
+        while (x != 0) {
+            switch (x) {
+                case 1:
+                    run2.InChuoi();
+                    break;
+                case 2:
+                    run2.KTDoDai();
+                    break;
+                case 3:
+                    run2.KTRong();
+                    break;
+                case 4:
+                    run2.KTKhoangTrang();
+                    break;
+                case 5:
+                    run2.ChuyenChuHoa();
+                    break;
+                case 6:
+                    run2.ChuyenChuThuong();
+                    break;
+                case 7:
+                    run2.KiemtraBang();
+                    break;
+                case 8:
+                    run2.KiemtraBang2();
+                    break;
+                case 9:
+                    run2.KTChuoi();
+                    break;
+                case 10:
+                    run2.KTKiTu();
+                    break;
+                case 11:
+                    run2.Daochuoi();
+                    break;
+                case 12:
+                    run2.ThayThe();
+                    break;
+                default:
+                    System.out.println("Khong ton tai lua chon cua ban");
+                    break;
+            }
+            System.out.println("Nhap tuy chon: ");
+            x = scanner.nextInt();
+        }
         scanner.close();
     }
 }
